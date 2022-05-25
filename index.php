@@ -60,6 +60,16 @@ var_dump($movies);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie</title>
+    <style>
+        .movie > div {
+            font-size: 2rem;
+            text-transform: uppercase;
+            text-align: center;
+            background-color: brown;
+            color: white;
+            padding: 0.5rem 0;
+        }
+    </style>
 </head>
 <body>
     
@@ -68,6 +78,7 @@ var_dump($movies);
             <h2>Titolo: <?php echo $movie->getTitle(); ?></h2>
             <p>Categoria: <?php echo $movie->getCategory(); ?></p>
             <p>Descrizione: <?php echo $movie->getDescription(); ?></p>
+            <div><?php echo $movie->play(); ?></div>
         <?php endforeach ?>
     </div>
     <!-- /.movie -->
